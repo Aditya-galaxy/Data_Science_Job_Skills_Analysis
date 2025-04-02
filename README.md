@@ -139,6 +139,7 @@ Here's the breakdown of the most demanded skills for the top 10 highest paying d
 - **Tableau** is also highly sought after, with a bold count of 6.
   Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
 
+For All Data Science roles:
 ![Top Paying Skills](assets/2_top_paying_roles_skills.png)
 _Bar graph visualizing the count of skills for the top 10 paying jobs; Created using Tableau_
 
