@@ -116,6 +116,8 @@ WITH top_paying_jobs AS(
         LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
     WHERE
         salary_year_avg IS NOT NULL
+        AND job_title_short = 'Data Analyst'
+        AND job_location = 'Anywhere'
     ORDER BY salary_year_avg DESC
     LIMIT 10
 )
@@ -127,7 +129,20 @@ FROM top_paying_jobs
 ORDER BY salary_year_avg DESC;
 ```
 
+![Top Paying Analyst Skills](assets/2_top_paying_analyst_roles_skills.png)
+_Bar graph visualizing the count of skills for the top 10 paying data analyst jobs; Created using Tableau_
+
 Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
+
+- **SQL** is leading with a bold count of 8.
+- **Python** follows closely with a bold count of 7.
+- **Tableau** is also highly sought after, with a bold count of 6.
+  Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
+
+![Top Paying Skills](assets/2_top_paying_roles_skills.png)
+_Bar graph visualizing the count of skills for the top 10 paying jobs; Created using Tableau_
+
+Here's the breakdown of the most demanded skills for the top 10 highest paying data jobs in 2023:
 
 - **Python** is leading with a bold count of 5.
 - **SQL** follows closely with a bold count of 4.
@@ -135,9 +150,6 @@ Here's the breakdown of the most demanded skills for the top 10 highest paying d
 - Then followed by **Excel** , **Spark** and **C++**
 - **Tableau** is also highly sought after.
   Other skills like **Python Libraries and tools**, **R** and **Cloud Skills** show varying degrees of demand.
-
-![Top Paying Skills](assets/2_top_paying_roles_skills.png)
-_Bar graph visualizing the count of skills for the top 10 paying jobs; Created using Tableau_
 
 ### 3. In-Demand Skills for Data Roles
 
@@ -149,6 +161,8 @@ SELECT skills,
 FROM job_postings_fact
     INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
     INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE job_title_short = 'Data Analyst'
+    AND job_work_from_home = TRUE
 GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 10
@@ -158,6 +172,18 @@ Here's the breakdown of the most demanded skills for data analysts in 2023
 
 - **SQL** and **Excel** remain fundamental, emphasizing the need for strong foundational skills in data processing and spreadsheet manipulation.
 - **Programming** and **Visualization Tools** like **Python**, **Tableau**, and **Power BI** are essential, pointing towards the increasing importance of technical skills in data storytelling and decision support.
+
+| Skills   | Demand Count |
+| -------- | ------------ |
+| SQL      | 7291         |
+| Excel    | 4611         |
+| Python   | 4330         |
+| Tableau  | 3745         |
+| Power BI | 2609         |
+
+_Table of the demand for the top 5 skills in data analyst job postings_
+
+Also, here's the breakdown of the most demanded skills for all Data roles in 2023
 
 | Skills   | Demand Count |
 | -------- | ------------ |
