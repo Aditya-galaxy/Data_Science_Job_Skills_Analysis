@@ -12,6 +12,10 @@ Data hails from [Datanerd](https://datanerd.tech). It's packed with insights on 
 
 Visualizations are provided using Tableau [ Profile](https://public.tableau.com/app/profile/aditya.kumar2705/vizzes)
 
+Entity Relationship Diagram (ERD) for the Database :
+
+![ERD](assets/erd.png)_Generated using PostgreSQL_
+
 ### The questions I wanted to be answered through my SQL queries:
 
 1. What are the top-paying jobs?
@@ -308,6 +312,9 @@ From the analysis, several general insights emerged:
 3. **Most In-Demand Skills**: SQL is also the most demanded skill in the data analyst job market, thus making it essential for job seekers.
 4. **Skills with Higher Salaries**: Specialized skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise.
 5. **Optimal Skills for Job Market Value**: SQL leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximize their market value.
+
+Dashboard :
+![Dashboard](assets/dashboard.png)_Created using Tableau_
 
 ### Closing Thoughts
 
